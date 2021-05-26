@@ -1,0 +1,105 @@
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: rgb(224, 222, 222);
+        }
+        
+        h1 {
+            margin-bottom: 40px;
+        }
+        
+        label {
+            color: rgb(49, 49, 49);
+            font-size: 15px;
+            font-weight: 600;
+        }
+        
+        .btn-send {
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            width: 80%;
+            margin-left: 3px;
+            font-size: 18px;
+        }
+        
+        .btn:not(:disabled):not(.disabled) {
+            margin: 2% 0;
+        }
+        
+        .help-block.with-errors {
+            color: #ff5050;
+            margin-top: 5px
+        }
+        
+        .card {
+            margin-left: 10px;
+            margin-right: 10px
+        }
+        
+        input[type=checkbox] {
+            display: flex;
+        }
+        
+        .genHobb {
+            display: inline-flex;
+        }
+        
+        .form-control {
+            font-size: 15px !important;
+            background-color: rgb(230, 230, 230);
+            ;
+        }
+        
+        .form-group {
+            margin-bottom: 5px !important;
+        }
+        
+        a:not([href]):not([tabindex]) {
+            font-size: 17px !important;
+            color: rgb(117, 116, 116);
+        }
+        
+        a:hover {
+            color: rgb(117, 116, 116) !important;
+        }
+        
+        .container {
+            width: 80% !important;
+            margin-top: 2%;
+        }
+        
+        select.form-control:not([size]):not([multiple]) {
+            height: calc(1.75rem + 2px);
+        }
+        
+        #border {
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(117, 116, 116);
+            padding: 2% 5%;
+            box-shadow: 2px 5px 4px 5px rgb(82, 81, 81);
+        }
+        
+        input[type=checkbox],
+        input[type=radio] {
+            background-color: rgb(117, 116, 116) !important;
+        }
+        
+        span {
+            color: rgba(207, 0, 0, 0.918);
+            font-size: 15px;
+        }
+        
+        .checkit {
+            padding: 0;
+            color: rgb(117, 117, 116);
+            font-size: 12px;
+        }
+        
+        .checkit:hover {
+            cursor: pointer;
+            background-color: rgb(245, 245, 245);
+        }
+        
+        span #email_error {
+            color: rgba(207, 0, 0, 0.918);
+        }

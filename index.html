@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>FORM VALIDATED</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <div class="row ">
+
+            <div class="container">
+                <div id="border">
+                    <form onsubmit="return results();" action="#" method="POST" id="vaitag" name="myform">
+                        <div class="controls">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="fname">First Name *</label>
+                                        <input id="fname" type="text" name="fname" class="form-control" placeholder="First Name *" data-error="Firstname is required." onkeypress="hideme()">
+
+                                        <b><span id="first_error"></span></b>
+                                        <!-- <div id="first_error"></div> -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lname">Lastname *</label>
+                                        <input id="lname" type="text" name="lname" class="form-control" placeholder="Last Name *" data-error="Lastname is required." onkeypress="hide_last()">
+
+                                        <b><span id="last_error"></span></b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Email *</label>
+                                        <input id="email" name="email" class="form-control" placeholder="Email *" onchange="hide_email()">
+                                        <b><span id="email_error"></span></b>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="qualify">Qualifications *</label>
+                                        <select id="qualify" name="qualify" class="form-control" data-error="Please specify your need.">
+                                            <option value="Select Qualification">--Select Qualification--</option>   
+                                            <option value="B.E">B.E</option>
+                                                <option value="BSC">BSC</option>
+                                                <option value="MBA">MBA</option>
+                                             <option value="BBA">BBA</option>
+                                            </select>
+                                        <b><span id="select_error"></span></b>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="genderHob"> <label for="gender">Gender *</label><br>
+                                        <input id="male" type="radio" value="Male" class="genHo" name="gender" onclick="hide_gender()"> <a>Male</a>
+
+
+                                        <input id="female" type="radio" value="Female" class="genHo" name="gender" onclick="hide_gender()"> <a>Female</a>
+
+
+                                        <input id="others" type="radio" value="Others" class="genHo" name="gender" onclick="hide_gender()"> <a>Others</a>
+                                        <!-- <b><span id="gender_error"></span></b> -->
+                                        <b><span id="gender_error"></span></b>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="genderHobb">
+                                        <label for="hobby" id="yeah">Hobbies*</label><br>&nbsp;
+                                        <input type="checkbox" onclick='selects()' id="checkit" style="display:inline-block;" />Select
+                                        <input type="checkbox" onclick='deSelect()' id="checkedit" style="display:inline-block;" />Deselect<br> &nbsp;
+
+                                        <input type="checkbox" id="hobby1" name="chk" class="genHobb" value="Riding" style="display: inline-flex;" onclick="hide_hobby()"> <a>Riding</a> &nbsp;
+                                        <input type="checkbox" id="hobby2" name="chk" class="genHobb" value="Driving" style="display: inline-flex;" onclick="hide_hobby()"> <a>Driving</a><br>&nbsp;
+                                        <input type="checkbox" id="hobby3" name="chk" class="genHobb" value="Dancing" style="display: inline-flex;" onclick="hide_hobby()"> <a>Dancing</a>
+                                        <input type="checkbox" id="hobby4" name="chk" class="genHobb" value="Singing" style="display: inline-flex;" onclick="hide_hobby()">
+                                        <a>Singing</a>
+                                        <b><span id="check_error"></span></b>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group"> <label for="comments">Message *</label> <textarea id="comments" name="comments" class="form-control" placeholder="Write your message here." rows="4" data-error="Please, leave us a message." onkeypress="hide_comments()"></textarea>
+                                        <b><span id="comments_error"></span></b>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <input id="submit" type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Send Message">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
